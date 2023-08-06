@@ -1,16 +1,6 @@
 'use strict' 
 
-/*
-Не могу понять как сделать, чтоб бот проверял число и выводил, 
-что такое число уже вводили. Как не пытался, не выходит. 
-*/
-
-/*
-Возможно это можно скомпоновать как то более окуратненько?
-Что то запихнуть в функции?
-*/
-
-alert('Введите диапазон');
+// alert('Введите диапазон');
 
 const numMin = 3;//+prompt('Введите ОТ')
 const numMax = 20;//+prompt('Введите ДО')
@@ -26,8 +16,6 @@ console.log(`random: ${rand}`);
 
 let number = 0;
 let arrNumbers = [];
-
-// Функция должна проверять вводилось ли число. Но не получается..
 const revis = (num, arr) => {
   for (const elem of arrNumbers) {
     if (number === elem) {
@@ -50,18 +38,20 @@ for (let i = 0; i < numberOfTimes; i++) {
     
     if (resRevis) {
       console.log('Это число вы вводили, введите другое');
+      }  
 
-      } else if (number > rand) {
-        console.log('Больше');
-
-        } else if (number < rand) {
-          console.log('Меньше');
-
-          } else if (number === rand) {
-            console.log('Верно!');
-
-            } else {
-              console.log('...');
+    if (number > rand) {
+      console.log('Больше');
+      } 
+      
+    if (number < rand) {
+      console.log('Меньше');
+      } 
+    
+    if (number === rand) {
+      console.log('Верно!');
+    } else {
+              console.log('Данные не верны');
             };
 };
 
