@@ -38,15 +38,15 @@ for (let i = 0; i < numberOfTimes; i++) {
     
     if (resRevis) {
       console.log('Это число вы вводили, введите другое');
-      }  
+      };  
 
     if (number > rand) {
       console.log('Больше');
-      } 
+      }; 
       
     if (number < rand) {
       console.log('Меньше');
-      } 
+      };
     
     if (number === rand) {
       console.log('Верно!');
