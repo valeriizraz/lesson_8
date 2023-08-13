@@ -1,7 +1,7 @@
 'use strict' 
 
 const numMin = 3;
-const numMax = 16;
+const numMax = 25;
 
 let sum = numMax - numMin;
 console.log(sum);
@@ -14,43 +14,37 @@ console.log(`random: ${rand}`);
 
 let number = 0;
 let arrNumbers = [];
-const revis = (num, arr) => {
+const revis = (num) => {
   for (const elem of arrNumbers) {
-    if (number === elem) {
+    if (num === elem) {
       console.log(elem);
       return elem;
     };
   };
 };
-const resRevis = revis(number, arrNumbers);
-console.log(resRevis);
 
 for (let i = 0; i < numberOfTimes; i++) {
-  rand;
   console.log(`Рандомное число ${rand}`);
 
   number = +prompt('Угадайте число');
-  arrNumbers.push(number); 
-
+  const resRevis = revis(number, arrNumbers);
   console.log(`Номер пользователя ${number}`);
-  console.log(arrNumbers);
-    
-    if (resRevis) {
-      console.log('Это число вы вводили, введите другое');
-      };  
 
     if (number > rand) {
       console.log('Больше');
-      }; 
-      
-    if (number < rand) {
+      } else if (number < rand) {
       console.log('Меньше');
-      };
-    
-    if (number === rand) {
+      } else if (number === rand) {
       console.log('Верно!');
-    } else {
-              console.log('Данные не верны');
-            };
+      } else {
+        console.log('Данные не верны');
+      };
+      
+      if (resRevis) {
+        console.log('Это число вы вводили, введите другое');
+      } else {
+        arrNumbers.push(number); 
+      }  
+        console.log(arrNumbers);
 };
 
