@@ -1,9 +1,7 @@
 'use strict' 
 
-// alert('Введите диапазон');
-
-const numMin = 3;//+prompt('Введите ОТ')
-const numMax = 20;//+prompt('Введите ДО')
+const numMin = 3;
+const numMax = 16;
 
 let sum = numMax - numMin;
 console.log(sum);
@@ -19,7 +17,8 @@ let arrNumbers = [];
 const revis = (num, arr) => {
   for (const elem of arrNumbers) {
     if (number === elem) {
-      return true;
+      console.log(elem);
+      return elem;
     };
   };
 };
